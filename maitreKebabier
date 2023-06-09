@@ -1,0 +1,14 @@
+const commands = [
+    ['salade', 'tomate', 'viande'],
+    ['salade', 'viande'],
+    ['salade', 'tomate', 'oignon', 'viande']
+];
+
+const makeKebabs = (commands) => {
+    for (let i = 0 ; i < commands.length ; i++) {
+    commands[i].push('pain')
+    commands[i].unshift('pain')
+    }
+    return commands
+}
+console.log(makeKebabs(commands))

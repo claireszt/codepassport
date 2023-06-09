@@ -1,0 +1,16 @@
+const neverTwoWithoutThree = () => {
+    const array = []
+    let i = 0;
+    while  (array.length <= 49) {
+        if (i.toString().includes('2') === true && i.toString().includes('3') === true) {
+            array.push(i)
+        }
+        i++
+        console.log(i);
+    }
+
+    return array
+
+}
+
+console.log(neverTwoWithoutThree())

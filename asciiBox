@@ -1,0 +1,36 @@
+const asciiBox = (width, height) => {
+    let result = '';
+
+    for (let h = 1 ; h <= height ; h++) {
+        if (h === 1 || h === height) {
+            for (let w = 1 ; w <= width ; w++) {
+                if (w === 1 || w === width) {
+                result += '+'
+            }
+            else (result += '-')
+            }
+        }
+        else {
+            for (let w = 1 ; w <= width ; w++) {
+                if (w === 1 || w === width) {
+                result += '|'
+            }
+            else (result += ' ')
+            }
+        }
+        result += '\n'
+    }
+
+    
+
+
+    console.log(result)
+    return result;
+};
+
+asciiBox(10,9)
+
+// + correspond aux angles du rectangle
+// - aux lignes horizontales
+// | aux lignes verticales
+// des espaces pour le milleu
