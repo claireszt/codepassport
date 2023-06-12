@@ -12,4 +12,4 @@ const addNeighbors = (values) => {
     return addValues
 }
 
-console.log(addNeighbors([1, 1, 1])) 
+console.log(addNeighbors([1, 2, 3])) 

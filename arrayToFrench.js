@@ -15,4 +15,4 @@ const arrayToFrench = (array) => {
     return 'Mon tableau contient '+string+'.'
 } 
 
-console.log(arrayToFrench(['tic','tac']))
+console.log(arrayToFrench(['Claire']))

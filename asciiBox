@@ -28,7 +28,7 @@ const asciiBox = (width, height) => {
     return result;
 };
 
-asciiBox(10,9)
+asciiBox(3,4)
 
 // + correspond aux angles du rectangle
 // - aux lignes horizontales
