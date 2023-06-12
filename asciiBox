@@ -7,7 +7,7 @@ const asciiBox = (width, height) => {
                 if (w === 1 || w === width) {
                 result += '+'
             }
-            else (result += '-')
+            else (result += '--')
             }
         }
         else {
@@ -15,22 +15,15 @@ const asciiBox = (width, height) => {
                 if (w === 1 || w === width) {
                 result += '|'
             }
-            else (result += ' ')
+            else (result += '  ')
             }
         }
         result += '\n'
     }
 
-    
-
-
     console.log(result)
     return result;
 };
 
-asciiBox(3,4)
+asciiBox(7, 4)
 
-// + correspond aux angles du rectangle
-// - aux lignes horizontales
-// | aux lignes verticales
-// des espaces pour le milleu
