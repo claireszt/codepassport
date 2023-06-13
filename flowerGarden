@@ -1,0 +1,30 @@
+const randomChoice = (choices) => {
+    return choices[Math.floor(Math.random() * choices.length)];
+};
+
+const randomRange = (min, max, precision) => {
+    return parseFloat((Math.random() * (max - min) + min).toFixed(precision));
+};
+
+const generateFlowers = (width, depth, count) => {
+ 
+    const flowers = []
+    for (let i = 1 ; i <= count ; i++) {
+        const flowerType = randomChoice(['rose', 'tulip', 'sunflower'])
+        const flowerSize = randomRange(15,20,0)
+        const flowerWidth = randomRange(0, width, 2)
+        const flowerDepth = randomRange(0, depth, 2)
+        
+        let flower = {}
+        flower.type = flowerType,
+        flower.size = flowerSize,
+        flower.x = flowerWidth,
+        flower.y = flowerDepth
+
+        flowers.push(flower)
+    }
+
+    return flowers
+}
+
+console.log(generateFlowers(6, 6, 5))
