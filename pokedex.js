@@ -10,4 +10,45 @@ const pokedex = [
     {id: 9, name: 'Tortank', evolution: -1, type: 'eau'},
 ];
 
-console.log(pokedex[0])
+const countPokemonsFromType = (typesearch) => {
+    let count = 0;
+    for (let i = 0 ; i < pokedex.length ; i++) {
+        if (pokedex[i].type === typesearch) {
+            count++
+        }
+
+    }
+    return count
+}
+
+const getPokemonsFromType = (typesearch) => {
+    const array = []
+    for (let i = 0 ; i < pokedex.length ; i++) {
+        if (pokedex[i].type === typesearch) {
+            array.push(pokedex[i])
+        }
+
+    }
+    return array
+}
+
+const getPokemonFromName = (pokename) => {
+    let returnpoke = ''
+    for (let i = 0 ; i < pokedex.length ; i++) {
+        if (pokedex[i].name === pokename) {
+            returnpoke = pokedex[i]
+        }
+
+    }
+    return returnpoke
+}
+
+const getPokemonEvolution = (pokename) => {
+    let returnevo = ''
+        if (getPokemonFromName(pokename).evolution !== -1) {
+            returnevo = [getPokemonFromName(pokename).id+1]
+        }
+    return returnevo
+}
+
+console.log(getPokemonEvolution('Herbizarre'))
