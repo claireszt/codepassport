@@ -5,7 +5,7 @@ const sortMethod = (a, b) => {
 
 const sortByLegs = (arr) => {
     let arrSort = []
-    for (i = 0 ; i < arr.length ; i++) {
+    for (i = 0 ; i < arr.length ; i++) {    
         arrSort.push(arr[i])
     }
     arrSort = arrSort.sort(sortMethod)
