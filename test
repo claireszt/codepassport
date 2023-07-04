@@ -1,0 +1,47 @@
+const pokedex = [
+    {id: 1, name: 'Bulbizarre', evolution: 2, type: 'plante'},
+    {id: 2, name: 'Herbizarre', evolution: 3, type: 'plante'},
+    {id: 3, name: 'Florizarre', evolution: -1, type: 'plante'},
+    {id: 4, name: 'Salamèche', evolution: 5, type: 'feu'},
+    {id: 5, name: 'Reptincel', evolution: 6, type: 'feu'},
+    {id: 6, name: 'Dracaufeu', evolution: -1, type: 'feu'},
+    {id: 7, name: 'Carapuce', evolution: 8, type: 'eau'},
+    {id: 8, name: 'Carabaffe', evolution: 9, type: 'eau'},
+    {id: 9, name: 'Tortank', evolution: -1, type: 'eau'},
+];
+
+const countPokemonsFromType = (type) => {
+    let count = 0
+    for (let i = 0 ; i < pokedex.length ; i++) {
+        if (pokedex[i].type == type) {
+            count++
+        }
+    }
+    return count
+}
+
+const getPokemonsFromType = (type) => {
+    const pokemons = []
+    for (let i = 0 ; i < pokedex.length ; i++) {
+        if (pokedex[i].type == type) {
+            pokemons.push(pokedex[i])
+        }
+    }
+    return pokemons
+}
+
+const getPokemonFromName = (name) => {
+    for (pokemon in pokedex) {
+        if (pokemon.name == name) {
+            return pokemon
+        }
+        else {return null}
+    }
+}
+
+const getPokemonEvolution = (name) => {
+    let pokemon = getPokemonFromName(name)
+    if (pokemon.evolution === -1) {
+        return null
+    } else {return pokedex[pokemon.evolution+1]}
+}
